@@ -1,0 +1,6 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '.', '-t', 'us-docker.pkg.dev/martinview6/martinview/gogin', '-f', 'Dockerfile.small']
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-docker.pkg.dev/martinview6/martinview/gogin']
